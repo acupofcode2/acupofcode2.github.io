@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Tesla Callback</title></head>
+<body>
+<h2>Tesla authorization result</h2>
+<pre id="out">reading...</pre>
+<script>
+const q = new URLSearchParams(location.search);
+document.getElementById('out').textContent = "code=" + (q.get("code") || "(none)") + "\nstate=" + (q.get("state") || "(none)") + "\nerror=" + (q.get("error") || "(none)");
+</script>
+</body></html>
